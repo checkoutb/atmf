@@ -1,32 +1,17 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# ignore all
+*
 
-# Precompiled Headers
-*.gch
-*.pch
+# don't ignore directory
+!*/
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# don'n ignore *.cpp *.h mk_cpp.py
+!*.cpp
+!*.h
+!mk_cpp.py
+!*.py
 
-# Fortran module files
-*.mod
-*.smod
+!*.go
+!*.rb
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# linux的执行文件没有后缀。。。无法使用之前的 *.o *.exe 了
