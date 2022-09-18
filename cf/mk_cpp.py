@@ -21,6 +21,8 @@ Even-Odd XOR
 
     name = name.replace("'", "")
     name = name.replace(" ", "_")
+    name = name.replace("(", "")
+    name = name.replace(")", "")
     no = code[0:-1]
     lv = code[-1:]
     
@@ -49,6 +51,7 @@ Even-Odd XOR
 #include <vector>
 //#include <cstdlib>
 //#include <cmath>
+//#include <limits.h>   // INT_MAX
 
 //#include <stack>
 //#include <bitset>
@@ -94,7 +97,7 @@ void fun1()
 
 int main()
 {
-    int w = 0;
+    int w = 1;
     cin>>w;
     
     
