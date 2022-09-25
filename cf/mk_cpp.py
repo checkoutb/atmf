@@ -23,6 +23,7 @@ Even-Odd XOR
     name = name.replace(" ", "_")
     name = name.replace("(", "")
     name = name.replace(")", "")
+    name = name.replace("?", "")
     no = code[0:-1]
     lv = code[-1:]
     
@@ -88,6 +89,10 @@ using ll = long long;
 
 void fun1()
 {
+    int sz1, sz2, kk;
+    cin >> sz1;
+    
+    
     
     
     
@@ -108,10 +113,12 @@ int main()
     }
     
     for (int _ = 0; _ < w; ++_)
-    {
-        
-        
+    {        
         fun1();
+        
+        #ifdef __test
+        cout << "   ---/////--------/////---" << endl;
+        #endif
         
         //cout<<endl;
     }
