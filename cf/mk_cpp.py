@@ -62,7 +62,7 @@ Even-Odd XOR
 //#include <map>
 //#include <queue>
 //#include <unordered_set>
-//#include <numeric>
+//#include <numeric>            // accumulate
 //#include <unordered_map>
 //#include <string.h>       // memset
 
