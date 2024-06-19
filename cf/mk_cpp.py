@@ -1,6 +1,7 @@
 import os
 import sys
 import time
+import platform
 
 # mk xxxx.cpp
 
@@ -65,13 +66,15 @@ Even-Odd XOR
 //#include <numeric>            // accumulate
 //#include <unordered_map>
 //#include <string.h>       // memset
+//#include <iomanip>    // std::setprecision(10)
 
-using namespace std;
+
+//using namespace std;
 
 //#define myvvi vector<vector<int>>
 //#define myvi vector<int>
-using myvvi = vector<vector<int>>;
-using myvi = vector<int>;
+using myvvi = std::vector<std::vector<int>>;
+using myvi = std::vector<int>;
 using ll = long long;
 
 #ifndef ONLINE_JUDGE
@@ -86,11 +89,11 @@ using ll = long long;
 
 
 
-
+// 
 void fun1()
 {
     int sz1, sz2, kk;
-    cin >> sz1;
+    std::cin >> sz1;
     
     
     
@@ -103,7 +106,10 @@ void fun1()
 int main()
 {
     int w = 1;
-    cin>>w;
+    #ifdef __test
+    std::cout<<"input cnt OR REMOVE IT:";
+    #endif
+    std::cin>>w;
     
     
     
@@ -117,7 +123,7 @@ int main()
         fun1();
         
         #ifdef __test
-        cout << "   ---/////--------/////---" << endl;
+        std::cout << "   ---/////--------/////---" << std::endl;
         #endif
         
         //cout<<endl;
@@ -147,6 +153,12 @@ int main()
         fd = open(name, mode="a+", encoding='utf-8')
         fd.write(content)
         fd.close()
+
+    with open("last_cpp_path", 'w', encoding='utf-8') as f:
+        f.write(name)
+    
+    if 'linux' in platform.system().lower():
+        print(os.system("emacsclient +52 " + name + " &"))
 
 if __name__ == "__main__":
     mk_cpp()
