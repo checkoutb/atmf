@@ -53,7 +53,7 @@ Even-Odd XOR
 #include <vector>
 //#include <cstdlib>
 //#include <cmath>
-//#include <limits.h>   // INT_MAX
+//#include <climits>   // INT_MAX
 
 //#include <stack>
 //#include <bitset>
@@ -67,7 +67,7 @@ Even-Odd XOR
 //#include <unordered_map>
 //#include <string.h>       // memset
 //#include <iomanip>    // std::setprecision(10)
-
+//#include <utility>  // pair (include by other header)
 
 //using namespace std;
 
