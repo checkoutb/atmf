@@ -51,6 +51,8 @@ Even-Odd XOR
 
 #include <bits/stdc++.h>
 
+// std::cout<<std::fixed<<std::setprecision(10)<<ans<<std::endl;
+
 #ifndef ONLINE_JUDGE
 #define __test
 #endif // ONLINE_JUDGE
@@ -63,8 +65,11 @@ using ll = long long;
 // 
 void fun1()
 {
+    int sz1, sz2, kk;
+
+    std::cin>>sz1;
     
-    
+
     
     
     
@@ -74,11 +79,18 @@ void fun1()
 
 int main()
 {
+
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+
+    
     int w = 1;
+
     #ifdef __test
-    std::cout<<"input cnt OR REMOVE IT:";
+    std::cout<<"input cnt OR REMOVE IT:"<<std::endl;
     #endif
-    std::cin>>w;
+    std::cin>>w;   // <----------- remove it or not
         
     for (int _ = 0; _ < w; ++_)
     {        
@@ -120,7 +132,7 @@ int main()
         f.write(name)
     
     if 'linux' in platform.system().lower():
-        print(os.system("emacsclient +17 " + name + " &"))
+        print(os.system("emacsclient +22 " + name + " &"))
 
 if __name__ == "__main__":
     mk_cpp()

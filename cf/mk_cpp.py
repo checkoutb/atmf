@@ -66,7 +66,7 @@ Even-Odd XOR
 //#include <numeric>            // accumulate
 //#include <unordered_map>
 //#include <string.h>       // memset
-//#include <iomanip>    // std::setprecision(10)
+//#include <iomanip>    // std::cout<<std::fixed<<std::setprecision(10)<<ans<<std::endl;
 //#include <utility>  // pair (include by other header)
 
 //using namespace std;
@@ -105,11 +105,18 @@ void fun1()
 
 int main()
 {
+
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+
+    
     int w = 1;
+    
     #ifdef __test
-    std::cout<<"input cnt OR REMOVE IT:";
+    std::cout<<"input cnt OR REMOVE IT:"<<std::endl;
     #endif
-    std::cin>>w;
+    std::cin>>w;  // <------   remove or not
     
     
     
