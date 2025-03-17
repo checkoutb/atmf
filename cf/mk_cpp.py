@@ -90,7 +90,7 @@ using ll = long long;
 
 
 // 
-void fun1()
+void fun1(bool show = false)
 {
     int sz1, sz2, kk;
     std::cin >> sz1;
@@ -119,14 +119,10 @@ int main()
     std::cin>>w;  // <------   remove or not
     
     
-    
-    for (int _ = w; _ < w; ++_)
-    {
-        
-    }
-    
     for (int _ = 0; _ < w; ++_)
-    {        
+    {
+        if (_ == -1)
+            fun1(true);
         fun1();
         
         #ifdef __test
@@ -165,7 +161,9 @@ int main()
         f.write(name)
     
     if 'linux' in platform.system().lower():
-        print(os.system("emacsclient +52 " + name + " &"))
+        # print(os.system("emacsclient +52 " + name + " &"))
+        # emacsclient -n -e "(progn (find-file \"2025-02_Round1006/CF_A_2025-02-25_New_World,_New_Me,_New_Array.cpp\") (goto-line 16) (move-to-column 3))"
+        print(os.system('emacsclient -n -e "(progn (find-file \\\"' + name + '\\\") (goto-line 52) (move-to-column 3))"'))
 
 if __name__ == "__main__":
     mk_cpp()

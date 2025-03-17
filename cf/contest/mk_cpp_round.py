@@ -51,7 +51,6 @@ Even-Odd XOR
 
 #include <bits/stdc++.h>
 
-// std::cout<<std::fixed<<std::setprecision(10)<<ans<<std::endl;
 
 #ifndef ONLINE_JUDGE
 #define __test
@@ -61,6 +60,7 @@ using namespace std;
 
 using ll = long long;
 
+// std::cout<<std::fixed<<std::setprecision(10)<<ans<<std::endl;
 
 // 
 void fun1()
@@ -69,7 +69,7 @@ void fun1()
 
     std::cin>>sz1;
     
-
+    
     
     
     
@@ -132,7 +132,9 @@ int main()
         f.write(name)
     
     if 'linux' in platform.system().lower():
-        print(os.system("emacsclient +22 " + name + " &"))
+        # print(os.system("emacsclient +16 " + name + " &"))
+        # emacsclient -n -e "(progn (find-file \"2025-02_Round1006/CF_A_2025-02-25_New_World,_New_Me,_New_Array.cpp\") (goto-line 16) (move-to-column 3))"
+        print(os.system('emacsclient -n -e "(progn (find-file \\\"' + name + '\\\") (goto-line 16) (move-to-column 3))"'))
 
 if __name__ == "__main__":
     mk_cpp()
